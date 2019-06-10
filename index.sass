@@ -1,0 +1,100 @@
+// Grid
+
+#container
+  position: absolute
+  width: 80%
+  left: 10%
+  height: 60%
+  top: 20%
+  background-color: black
+  display: grid
+  grid-template-columns: 3fr 7fr
+  grid-column-gap: 12px
+
+#col1
+  grid-column: 1
+  background-color: #cccccc
+
+  // For sub grid
+  display: grid
+  grid-template-columns: 40px 1fr
+  padding-right: 12px
+
+#lMenu
+  background-color: #eeeeee
+  display: flex
+  flex-direction: column-reverse
+
+  .icon
+    height: 40px
+
+#rMenu
+  display: flex
+  flex-direction: column
+  padding-top: 10px
+  padding-left: 6px
+
+  .menu
+    height: 40px
+    background-color: #bbbbbb
+    margin-bottom: 3px
+    padding-left: 5px
+    display: flex
+    align-items: center
+
+#col2
+  padding-top: 12px
+  grid-column: 2
+
+  // For sub grid
+  display: grid
+  grid-template-columns: repeat(auto-fill, 100px)
+  grid-template-rows: repeat(auto-fill, 100px)
+  grid-column-gap: 12px
+  grid-row-gap: 12px
+
+.public
+  color: white
+
+.boxOneOne
+  grid-column: span 1
+  grid-row: span 1
+
+.boxOneTwo
+  grid-column: span 2
+  grid-row: span 1
+
+.boxTwoTwo
+  grid-column: span 2
+  grid-row: span 2
+
+.boxText
+  color: white
+  position: relative
+  top: 80px
+  left: 5px
+
+.bigBoxText
+  top: 190px
+
+// Animations (demo)
+
+.down-slide-up
+  max-height: 100px
+  &:hover
+    max-height: 0px
+  transition: max-height 0.75s ease-in-out
+
+// Colors
+
+.yellow
+  background-color: yellow
+
+.green
+  background-color: green
+
+.purple
+  background-color: purple
+
+.cb
+  color: black
